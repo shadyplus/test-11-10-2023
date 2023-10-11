@@ -1,0 +1,2124 @@
+<?php
+    if (isset($_GET["pixel"])) setcookie("pixel", $_GET["pixel"], time() + 86400); // FB Pixel
+    setcookie("country", "MA", time() + 86400); // Set country
+    setcookie("language", "AR", time() + 86400); // Set language
+?>
+<!DOCTYPE html>
+<html dir=rtl style>
+<head>
+
+<meta charset=utf-8>
+<title>
+    تنظيف الأوعية الدموية بالمنزل
+</title>
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+    :root {
+        --sf-img-3: url("data:image/jpeg;base64,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")
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+        font-family: Merriweather, serif;
+        font-size: 22px;
+        color: #000;
+        background-color: #F4F7FA
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    #title_block {
+        width: 100%
+    }
+
+    .title_block_wrapper {
+        width: 100%;
+        height: 100%
+    }
+
+    .title_block_content {
+        position: relative;
+        width: 100%;
+        height: 100%
+    }
+
+    .title_block_img .title_img {
+        margin: 0px !important;
+        padding: 0px !important;
+        height: 100% !important;
+        width: 100% !important;
+        display: inline !important;
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+
+    .title_block_img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+
+    .title_block_shadow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background: #000 !important;
+        opacity: 0.7
+    }
+
+    .title_block_texts {
+        position: relative;
+        z-index: 9;
+        background: transparent !important;
+        padding: 21px
+    }
+
+    .title_block_bread span {
+        color: #fff;
+        font: bold 10px/16px "IBM Plex Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: .88
+    }
+
+    .title_h1 {
+        font: 600 40px/48px "IBM Plex Sans", sans-serif;
+        color: #fff
+    }
+
+    .title_bq {
+        border-left: 4px solid #349dee;
+        padding-left: 16px;
+        color: #fff;
+        opacity: 0.88;
+        font: 24px/40px Merriweather, serif
+    }
+
+    .title_block_author {
+        margin-top: 26px
+    }
+
+    .tauthor {
+        font: 600 19px/24px "IBM Plex Sans", sans-serif;
+        color: #349dee
+    }
+
+    .tdate {
+        margin-top: 2px;
+        color: #fff;
+        font: 500 10px/16px "IBM Plex Sans", sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase
+    }
+
+    .title_block_texts div {
+        background: transparent !important
+    }
+
+    #top {
+        height: 120px;
+        background: transparent;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: top right
+    }
+
+    #topwrap {
+        height: 80px;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: transparent
+    }
+
+    .topleft {
+        height: 80px;
+        width: 740px;
+        float: left;
+        position: relative;
+        margin-left: 10px
+    }
+
+    .toplogo {
+        position: absolute;
+        left: 0;
+        height: 40px;
+        top: 10px
+    }
+
+    #bodyWrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5)
+    }
+
+    #mainWrapper {
+        width: 100%;
+        height: 100%
+    }
+
+    #wrapper {
+        max-width: 1000px;
+        margin: 0px auto
+    }
+
+    #content {
+        padding: 0px;
+        width: 100%
+    }
+
+    #content .padWrap {
+        padding: 15px
+    }
+
+    #content img {
+        max-width: 100%;
+        display: block;
+        margin: 20px auto
+    }
+
+    #content p {
+        font-size: 18px;
+        line-height: 29px
+    }
+
+    .pg {
+        font-size: 22px !important;
+        line-height: 36px !important;
+        margin-bottom: 33px
+    }
+
+    #content h1 {
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: bold
+    }
+
+    #content h2 {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 28px;
+        margin-bottom: 33px;
+        line-height: 32px
+    }
+
+    #content h3 {
+        font-size: 22px;
+        line-height: 36px;
+        margin-bottom: 33px
+    }
+
+    #content ul {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 500
+    }
+
+    #content ul li {
+        margin-bottom: 20px
+    }
+
+    #comments {
+        margin-top: 120px
+    }
+
+    #comments .pg {
+        font-size: 15px !important;
+        line-height: 28px !important;
+    }
+
+    #comments h2 {
+        /* background: url(data:text/html;base64,PGh0bWw+DQo8aGVhZD48dGl0bGU+NDA0IE5vdCBGb3VuZDwvdGl0bGU+PC9oZWFkPg0KPGJvZHkgYmdjb2xvcj0id2hpdGUiPg0KPGNlbnRlcj48aDE+NDA0IE5vdCBGb3VuZDwvaDE+PC9jZW50ZXI+DQo8aHI+PGNlbnRlcj5uZ2lueDwvY2VudGVyPg0KPC9ib2R5Pg0KPC9odG1sPg0K) no-repeat; */
+        padding-left: 40px;
+        color: #000;
+        margin-right: 20px;
+        border-bottom: 0px solid;
+        border-color: #000;
+        text-transform: uppercase;
+        padding-bottom: 10px
+    }
+
+    #comments .coment_ava {
+        float: right;
+        margin-left: 15px
+    }
+
+    #comments .coment_ava img {
+        margin: 0px;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px
+    }
+
+    @media screen and (max-width:1020px) {
+        #content {
+            width: 100%
+        }
+    }
+
+    @media screen and (max-width:780px) {
+        .topleft {
+            width: 100%
+        }
+    }
+
+    @media screen and (max-width:690px) {
+        .topleft {
+            width: 100%
+        }
+    }
+
+    @media screen and (max-width:660px) {
+        #content h1 {
+            font-size: 28px;
+            line-height: 36px
+        }
+
+        .mainLogo {
+            width: 400px
+        }
+    }
+
+    @media screen and (max-width:590px) {
+        .mainLogo {
+            width: 300px;
+            margin-top: 10px
+        }
+    }
+
+    @media screen and (max-width:560px) {
+        .pg {
+            margin-left: 0px;
+            margin-right: 0px
+        }
+
+        #content .padWrap {
+            padding: 8px
+        }
+    }
+
+    @media screen and (max-width:420px) {
+        .title_bq {
+            font-size: 18px !important;
+            line-height: 28px !important
+        }
+
+        .tauthor {
+            font-size: 14px
+        }
+    }
+
+    @media screen and (max-width:470px) {
+        .mainLogo {
+            width: 200px
+        }
+
+        #top {
+            height: 80px
+        }
+    }
+
+    @media screen and (max-width:380px) {
+        .mainLogo {
+            width: 180px
+        }
+    }
+
+    @media screen and (max-width:345px) {
+        .mainLogo {
+            width: 150px
+        }
+    }
+
+    @media screen and (max-width:310px) {
+        .mainLogo {
+            display: none
+        }
+
+        #top {
+            background-position: top center
+        }
+    }
+
+    @media screen and (min-width:1300px) {
+        #wrapper {
+            max-width: 1000px
+        }
+
+        #content {
+            width: 100%
+        }
+
+        #topwrap {
+            max-width: 1000px
+        }
+    }
+
+    @media screen and (min-width:1600px) {
+        #wrapper {
+            max-width: 1000px
+        }
+
+        #content {
+            width: 100%
+        }
+
+        #topwrap {
+            max-width: 1000px
+        }
+    }
+
+    a:active,
+    a:focus {
+        outline: none
+    }
+
+    input:active {
+        outline: none
+    }
+
+    :focus {
+        outline: none
+    }
+
+    #footer {
+        padding: 10px;
+        text-align: center
+    }
+
+    .Figure img {
+        float: none
+    }
+
+    .left_count {
+        font-size: 130% !important
+    }
+
+    .left_count .prod_left_val {
+        font-size: 52px !important
+    }
+
+    .article__text {
+        color: #333;
+        padding-top: 14px
+    }
+
+    .submit-roulette:hover {
+        background: #bb0000;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s
+    }
+
+    .bg_tt {
+        background: #FFECA6;
+        padding: 20px
+    }
+
+    p.rul_1 {
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        padding: 0
+    }
+
+    p.rul_2 {
+        font-weight: bold
+    }
+
+    .center {
+        text-align: center
+    }
+
+    input,
+    input {
+        padding-left: 5px;
+        height: 42px;
+        margin-bottom: 10px
+    }
+
+    .priceс {
+        -webkit-box-shadow: rgb(0 0 0 / 80%) 0px 3px 30px;
+        text-align: center !important;
+        -webkit-transform: rotateZ(-7deg);
+        background: -webkit-gradient(linear, left top, right top, from(rgb(238, 165, 19)), to(rgb(253, 237, 19)));
+        -o-border-image: initial
+    }
+
+    .row-y-item{
+        padding: 12px;
+    }
+    b {
+        font-weight: bolder
+    }
+
+    .prod_img {
+        width: 100%;
+        margin-right: 123px
+    }
+  
+
+    .prod_img_wrapper {
+        max-width: 300px;
+        margin: 15px auto;
+        position: relative
+    }
+
+    .span-input-roulette.phone_in:before {
+        content: ' رقم هاتفك '
+    }
+
+    .span-input-roulette:before {
+        display: inline-block;
+        color: #333;
+        line-height: 47px;
+        position: absolute;
+        top: -35px;
+        font-size: 95%;
+        right: 2px;
+    }
+
+    input {
+        outline: none
+    }
+
+    input.submit-roulette {
+        text-transform: uppercase;
+        padding: 10px 30px;
+        margin: 15px 0;
+        outline: none;
+        border: none;
+        margin-top: 5px;
+        border-radius: 5px;
+        background: #ff0000f7;
+        color: #fff;
+        font-size:23px ;
+        font-weight: bold;
+        cursor: pointer;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s;
+        width: 450px;
+        max-width: 100%;
+        -webkit-appearance: 5px;
+        -webkit-border-radius: 5px
+    }
+
+    .span-input-roulette.name_in:before {
+        content: 'الإسم '
+    }
+
+    .span-input-roulette {
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 450px
+    }
+
+    .input-roulette {
+        width: 100%;
+        border: 2px solid grey;
+        border-radius: 5px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .span-input-roulette.name_in:before {
+        content: ' الإسم '
+    }
+
+    .span-input-roulette:before {
+        display: inline-block;
+        color: #333;
+        line-height: 47px;
+        position: absolute;
+        top: -35px;
+        font-size: 95%;
+        left: 5px
+    }
+
+    .priceс {
+        position: absolute;
+        font-family: 'Arial', sans-serif;
+        right: 0;
+        bottom: 0;
+        color: #000;
+        -webkit-box-shadow: rgb(0 0 0 / 80%) 0px 3px 30px;
+        box-shadow: rgb(0 0 0 / 80%) 0px 3px 30px;
+        width: 165px;
+        height: 98px;
+        text-align: center !important;
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 1.3;
+        -webkit-transform: rotateZ(-7deg);
+        transform: rotateZ(-7deg);
+        margin: -0px auto 0px;
+        background: -webkit-gradient(linear, left top, right top, from(rgb(238, 165, 19)), to(rgb(253, 237, 19)));
+        background: linear-gradient(to right, rgb(238, 165, 19) 0%, rgb(253, 237, 19) 100%);
+        border-width: 2px;
+        border-style: solid;
+        border-color: rgb(255, 255, 255);
+        -o-border-image: initial;
+        border-image: initial;
+        border-radius: 19%
+    }
+
+    span.discountс {
+        display: block;
+        margin-top: 9px;
+        font-size: 18px
+    }
+
+    .js_old_price {
+        display: block;
+        margin: 0 auto
+    }
+
+    .price_main {
+        border-bottom: 2px solid #d31812;
+        font-size: 24px;
+        line-height: 0px;
+        margin: 0 auto
+    }
+
+    .ft {
+        text-align: center;
+        font-size: 11px
+    }
+
+    .submit-roulette:hover {
+        background: #bb0000;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s
+    }
+
+    .submit-roulette:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -webkit-box-shadow: none;
+        box-shadow: none
+    }
+
+    .submit-roulette {
+        -webkit-box-shadow: 0px 4px 3px #242120;
+        box-shadow: 0px 4px 3px #242120;
+        -webkit-transition: background 0.3s
+    }
+
+    .input-roulette {
+        padding-left: 5px;
+        height: 42px;
+        margin-bottom: 10px;
+        max-width: 100%
+    }
+
+    .spin-wrapper {
+        -webkit-box-shadow: 0 0 10px;
+        box-shadow: 0 0 10px;
+        border: 3px solid red;
+        padding: 20px 10px;
+        border-radius: 10px;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .order_block {
+        text-align: center !important;
+        display: block;
+    border: 3px double;
+    border-radius: 20px;
+    padding: 12px;
+    }
+
+    .order_block h3 {
+        font: bold 18px Arial !important;
+        background: transparent
+    }
+
+    #everad_form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: 'Proxima Nova', 'Arial', 'Helvetica Neue', sans-serif
+    }
+
+    .time_remains {
+        font-size: 1.1em;
+        color: red;
+        font-weight: bold
+    }
+
+    .spin-result-wrapper {
+        padding: 0 10px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center
+    }
+
+    @-webkit-keyframes super-rotation {
+        70% {
+            -webkit-transform: rotate(1600deg);
+            transform: rotate(1600deg)
+        }
+
+        100% {
+            -webkit-transform: rotate(1574deg);
+            transform: rotate(1574deg)
+        }
+    }
+
+    @keyframes super-rotation {
+        70% {
+            -webkit-transform: rotate(1600deg);
+            transform: rotate(1600deg)
+        }
+
+        100% {
+            -webkit-transform: rotate(1574deg);
+            transform: rotate(1574deg)
+        }
+    }
+
+    @-webkit-keyframes pop-up-appear {
+        0% {
+            -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px)
+        }
+
+        30% {
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px)
+        }
+
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px)
+        }
+    }
+
+    @keyframes pop-up-appear {
+        0% {
+            -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px)
+        }
+
+        30% {
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px)
+        }
+
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px)
+        }
+    }
+
+    @-webkit-keyframes pop-up-appear-before {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0)
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+
+    @keyframes pop-up-appear-before {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0)
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+
+    @-webkit-keyframes pop-up-appear-after {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes pop-up-appear-after {
+        0% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    .Figure-caption {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 520px;
+        padding-top: 4px;
+        color: #1a1a1a;
+        display: block
+    }
+
+    .Figure {
+        display: block;
+        max-width: 650px;
+        width: 100%;
+        margin: 20px auto
+    }
+
+    a.button {
+        font-size: 120%;
+        text-align: center;
+        color: #fff !important;
+        background-color: red;
+        display: table;
+        margin: 25px auto;
+        width: 400px;
+        max-width: 100%;
+        border-radius: 15px;
+        text-decoration: none;
+        padding: 15px
+    }
+
+    a.button:hover {
+        background-color: #c11f1f
+    }
+
+    .left_count {
+        display: table;
+        text-align: center;
+        padding: 10px 30px;
+        background: red;
+        margin: 12px auto;
+        color: #fff;
+        text-shadow: 0 -1px 0 #000000, 0 -1px 0 #000000, 0 1px 0 #000000, 0 1px 0 #000000, -1px 0 0 #000000, 1px 0 0 #000000, -1px 0 0 #000000, 1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+        font-size: 130% !important;
+        border-radius: 5px
+    }
+
+    .green_text {
+        color: green;
+        font-weight: bold
+    }
+    
+    @media (max-width:600px) {
+        a.button {
+            width: 80%
+        }
+    }
+
+    @-webkit-keyframes super-rotation {
+        70% {
+            -webkit-transform: rotate(1660deg);
+            transform: rotate(1660deg)
+        }
+
+        100% {
+            -webkit-transform: rotate(1620deg);
+            transform: rotate(1620deg)
+        }
+    }
+
+    @keyframes super-rotation {
+        70% {
+            -webkit-transform: rotate(1660deg);
+            transform: rotate(1660deg)
+        }
+
+        100% {
+            -webkit-transform: rotate(1620deg);
+            transform: rotate(1620deg)
+        }
+    }
+</style>
+<link rel="shortcut icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    type=image/x-icon>
+<style>
+    .sf-hidden {
+        display: none !important
+    }
+</style>
+</head>
+
+<body>
+    <div id="bodyWrapper">
+        <div id="top_xs" class="sf-hidden">
+
+        </div>
+        <div id="top">
+            <div id="topwrap">
+                <div class="topleft">
+                    <div class="toplogo">
+                        <img style="margin: auto; max-width: 100%;" src="img/download.jpeg" alt="">
+                    </div>
+                    <div class="topdate date-5 sf-hidden">30.01.2022</div>
+                </div>
+            </div>
+        </div>
+        <div id="mainWrapper">
+            <div id="wrapper" style="display:block">
+                <div id="content">
+                    <div id="title_block">
+                        <div class="title_block_wrapper">
+                            <div class="title_block_content">
+                                <div class="title_block_img">
+                                    <img src=data:image/jpeg;base64,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
+                                        class=title_img>
+                                </div>
+                                <div class="title_block_shadow"></div>
+                                <div class="title_block_texts">
+                                    <div class="title_block_bread">
+                                        <span>مقابلات •</span>
+                                        <span>الصندوق الذهبي •</span>
+                                        <span>مقالات</span>
+                                    </div>
+                                    <div class="title_block_subcontent">
+                                        <div class="title_block_lead">
+                                            <h1 class="title_h1">بعد تنظيف الأوعية الدموية  بهذه الطريقة،
+                                                يستقر ضغط الدم وتزول 9 أمراض أخرى يُفترض أنها "غير قابلة للشفاء"!
+                                            </h1>
+                                            <div class="title_bq">طبيب أمراض القلب المغربي المشهور يوسف محمد يكشف عن طريقة بسيطة
+                                                للتخلص من  أمراض القلب
+                                            </div>
+                                            <div class="title_block_author">
+                                                <div class="tauthor">عادل ميرزا
+                                                </div>
+                                                <div data-format="dd month yyyy" class="tdate start date-7">
+                                                    22.05.2022
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padWrap">
+                        <div class="article__text js-mediator-article">
+                            <div class="article_content" style="padding-top:33px">
+                                <figure class="Figure" style="text-align:center">
+                                    <img
+                                        src=data:image/jpeg;base64,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>
+                                    <span class="Figure-caption"></span>
+                                </figure>
+                                <p>الدكتور يوسف محمد، طبيب أمراض القلب من المغرب. اشتهر بمساعدة الناس دون
+                                    استخدام حبوب. وفي نفس الوقت، كل من يشخصه دكتور يوسف محمد لا بد أن يتعافى 
+                                   
+                                   . ومن بين مرضى الدكتور يوسف  مشاهير المغرب
+                                    وكذلك مرضى من دول أخرى يأتون إليه.
+                                </p>
+                                <p>من النادر إجراء مقابلة مع الدكتور يوسف محمد، لأنه يكرس معظم وقته لعلاج المرضى.
+                                    ومع ذلك، حظي مراسلنا بفرصة نادرة ووافق الطبيب الشهير على الإجابة عن بعض الأسئلة
+                                    لهؤلاء المرضى الذين لا تتاح لهم فرصة لمقابلته في العيادة.
+                                </p>
+                                <p>الدكتور يوسف محمد على يقين من أن أي شخص يمكنه تنظيف الأوعية الدموية في المنزل
+                                    وتحسين صحته. تساعد هذه العملية على التخلص من ارتفاع الضغط وعلاج 9 أمراض مزمنة لدى
+                                    كبار في السن.
+                                </p>
+                                <p>كيف تجرى عملية التنظيف، يصف الطبيب أدناه، مغطيًا المواضيع الأخرى مثل:
+                                </p>
+                                <ul>
+                                    <li> العيش حتى 100 عامًا بدون تناول حبوب أمر حقيقي!
+                                    </li>
+                                    <li> لماذا تتبع الأمراض المزمنة المستعصية الأوعية المتسخة؟
+                                    </li>
+                                    <li> العلامات المخفية والجلية للأوعية المتسخة.
+                                    </li>
+                                    <li> الطرق الحديثة للتخلص من  ضغط الدم المرتفع.
+                                    </li>
+                                </ul>
+                                <p><b>الأوعية المتسخة تقتلك ببشاعة!
+                                    </b> </p>
+                                <p><b>يقول الدكتور يوسف محمد:
+                                    </b> </p>
+                                <p>- سأقدم لكم بعض البيانات أملاً أنها تجعلكم تتمعنوا في التفكير!
+                                </p>
+                                <p>السبب الأكثر انتشاراً للوفاة على كوكبنا هو أمراض القلب والأوعية. السبب الرئيسي
+                                    لظهورها في العمر المتقدم هو الكوليسترول. اتضح أن الكوليسترول هو أخطر مادة على كوكب
+                                    الأرض. هذه المادة تقتل الناس أكثر مما يقتل الكحول والنيكوتين والمخدرات معاً.
+                                </p>
+                                <p>في 94% من الحالات إذا يموت الفرد قبل 80 سنة من العمر، فموته يرجع لمادة الكوليسترول.
+                                </p>
+                                <p><b>الكوليسترول ضار بالصحة. بسبب تراكمه في الأوعية، يعجز الإنسان عن العيش حتى  عن العيش مرتاح البال
+                                         .
+                                    </b> </p>
+                                <p>ما هي هيئة الكوليسترول وما هو؟ لن أصف هذه المادة الآن كما يذكر في الكتب الجامعية
+                                    الطبية. دعني أشرح الأمر ببساطة، تخيل الدهون الباردة المتبقية من مقلاة لا تغسل بعد
+                                    العشاء. هذا بالضبط ما يبدو عليه الكوليسترول.
+                                </p>
+                                <p>بوجود هذه المادة في الدم، إنها تستقر على جدران الأوعية الدموية. في البداية تكون
+                                    طبقتها صغيرة (في عمر 20-25 عامًا)، ومن ثم تنمو طبقة الكوليسترول بسرعة (25-40 عامًا)،
+                                    حيث يتزايد التصاقها تدريجيًا بالتقدم في العمر. بحلول 40 عامًا يسد الكوليسترول
+                                    الأوعية الدموية بضعفين عن وضعه الطبيعي. واستجابة لذلك، يعمل القلب على رفع ضغط الدم.
+                                    يعاني الشخص من ارتفاع ضغط الدم المرتبط بالعمر مع كل الآثار المترتبة عن ذلك. لكن ثمة
+                                    أمر أكثر خطورة!
+                                </p>
+                                <p>وهو أن الكوليسترول يسد الأوعية الصغيرة بالكامل المنتشرة في جميع الأنسجة. ونتيجة
+                                    لتدهور تدفق الدم، تتطور الأمراض العديدة في الأعضاء الداخلية. وعلى هذه الخلفية، يعاني
+                                    الشخص من تقرحات مزمنة.
+                                </p>
+                                <p>ففي البداية، آلام في المعدة ومن ثم الطحال، وبعد فترة وجيزة تواجهك مشاكل  في الكبد والبنكرياس.
+                                    يقال إن في مثل هذه الحالات صحة المريض تتلاشى أمام عينيه. ومادة الكوليسترول هي المسبب
+                                    الرئيسي لهذه العملية.
+                                </p>
+                                <figure class="Figure" style="text-align:center">
+                                    <img
+                                        src="img/download (1).jpeg">
+                                    <span class="Figure-caption">مادة الكوليسترول. بحلول سن 50-60 من العمر، تتراكم حتى 3.5
+                                        كغم من هذه المادة الخطرة في جسم الإنسان!
+                                    </span>
+                                </figure>
+                                <p>تعتمد    جميع الأعضاء في الجسم على حالة الأوعية الدموية بالمعنى الحرفي. وفي حال انسداد
+                                    الأوعية الدموية في الساقين، تتوسع الأوردة ألم مستمر وثقل أبدي في الساقين. وإذا
+                                    أثرت المادة على  الكبد، فيلتهب، وإذا أثرت على المفاصل، فتلتهب أيضاً وتؤدي إلى ألم
+                                    حاد في العمود الفقري. وعند انسداد الأوعية الدموية في العين، يفقد الشخص بصره
+                                    تدريجياً.
+                                </p>
+                                <h3>يستحيل تجنب تلوث الأوعية الدموية! تتراكم الشوائب في الأوعية عند الكل. اتساخ الأوعية
+                                    الدموية العامل المسبب للشيخوخة المبكرة.
+                                </h3>
+                                <p>مادة الكوليسترول بالضبط هي بمثابة العامل المشرع في تفاعل سلسلة الشيخوخة المبكرة في
+                                    الجسم واتساخ الأوعية الدموية يقصر حياة الإنسان لأقل من المدة المقررة طبيعياً.
+                                </p>
+                                <p><b>فبدلاً من العيش 100 عامًا (هذا بالضبط عمر الموارد التي تمتلكها أعضائنا)، غالبًا لا
+                                        يتسنى لمعظمنا العيش طويلاً حتى سن الـ70 من العمر!</b> خاصة المصابين بارتفاع ضغط الدم
+                                    في سن 40-50. بالمناسبة، يعد ارتفاع ضغط الدم من الأعراض الجلية لإتساخ الأوعية
+                                    الدموية.
+                                </p>
+                                <h3>ليس الكوليسترول فحسب... فهناك مواد أخرى تؤدي إلي انسداد  الأوعية الدموية أيضًا!
+                                </h3>
+                                <p><b>يقول الدكتور يوسف محمد:
+                                    </b> </p>
+                                <p>الكوليسترول هو نصف مصيبة، فهناك مادتان أخريان تتراكمان في الأوعية!
+                                </p>
+                                <p class="center"><b>تجلط الدم
+                                    </b> </p>
+                                <p>إذا كان الكوليسترول يشبه الدهون، فإن تجلط الدم يشبه خثارة اللبن. تتشكل زوائد تجلط
+                                    الدم على الجدران الداخلية للأوعية الدموية. وخطرها أعلى من الكوليسترول. ففي أي لحظة،
+                                    قد ينعزل تجلط الدم المتراكم من جدار الأوعية ويدخل منطقة القلب، مما قد يؤدي إلى
+                                    احتشاء عضلي، أو يدخل منطقة الدماغ، مما قد يؤدي إلى السكتة الدماغية. كلا الحالتين
+                                    مفادهما الموت أو العجز الدائم.
+                                </p>
+                                <p>فكلما تقدم الشخص في السن، زاد خطر وقوع تجلط الدم. لهذا السبب الكبار في السن غالبًا ما
+                                    يقعون ضحية للسكتة الدماغية أو النوبة القلبية.
+                                </p>
+                                <p class="center"><b>بلورات الكالسيوم
+                                    </b> </p>
+                                <p>هي أملاح المعادن الثقيلة والزئبق والمواد الكيميائية المختلفة المتراكمة على مدى حياة
+                                    الفرد. فإذا كان عمل الفرد مرتبط بخطر للصحة، فسيكون لديه الكثير من هذه السموم. على
+                                    الرغم من أن، في ضوء البيئة الحالية، تتراكم السموم عند الكل. هذه المواد، كما سبق
+                                    الإثبات بشأنها، هي المشكلة للخلايا السرطانية. أي أنها تساهم في انقسام الخلايا بشكل
+                                    غير طبيعي.
+                                </p>
+                                <p>ما يقرب من 98% من الذين يموتون بسبب السرطان تكون لديهم مستويات عالية من الترسبات
+                                    البلورية في الدم. نعلم جميعًا أن الزئبق ضار للصحة. ومع تراكم بلورات الكالسيوم بكثرة،
+                                    يصبح الدم بذاته ضارًا.
+                                </p>
+                                <figure class="Figure" style="text-align:center">
+                                    <img
+                                        src="img/download (2).jpeg">
+                                    <span class="Figure-caption">بحلول سن الـ50، تنسد الأوعية الدموية في جميع أنحاء الجسم.
+                                        فكلما زاد اتساخ الأوعية، زادت الأمراض المزمنة، وكلما تقدم الإنسان في العمر، شعر
+                                        بالسوء!
+                                    </span>
+                                </figure>
+                                <h3>تحقق من مدى تلوث الأوعية الدموية لديك وهل أنت معرض لخطر الموت المبكر!
+                                </h3>
+                                <p><b>يقول الدكتور يوسف محمد:
+                                    </b> </p>
+                                <p>يمكنني أن أخبركم على الفور أن في حال عدم تنظيف الأوعية على الإطلاق، وعمرك يزيد عن 50
+                                    عامًا، فإن الأوعية الدموية لديك متسخة جدًا. وإذا قمت بتنظيفها، ستشعر بتحسن على
+                                    الفور.
+                                </p>
+                                <p>أعراض الأوعية المتسخة:
+                                </p>
+                                <ul>
+                                    <li>انتفاخ الساقين في ساعات الصباح.
+                                    </li>
+                                    <li> طنين الأذنين.
+                                    </li>
+                                    <li> ضعف البصر.
+                                    </li>
+                                    <li> آلام المفاصل.
+                                    </li>
+                                    <li> الدوخة.
+                                    </li>
+                                    <li> أرق بالليل ونعاس أثناء النهار.
+                                    </li>
+                                    <li> الشعور بالتعب المستمر.
+                                    </li>
+                                    <li> ضعف الذاكرة.
+                                    </li>
+                                    <li> توسع الأوردة.
+                                    </li>
+                                    <li> ضيق التنفس.
+                                    </li>
+                                    <li> مشكلات مزمنة في الجهاز الهضمي.
+                                    </li>
+                                    <li> مشكلات الوزن الزائد.
+                                    </li>
+                                </ul>
+                                <h3>هل أنت تُقر، إن تنظيف الأوعية الدموية يطيل من عمر الكبار في السن و يجعل  ضغط الدم مستقر 
+                                    عندهم؟
+                                </h3>
+                                <p><b>الدكتور يوسف محمد يجيب:
+                                    </b> </p>
+                                <p>- إنها الحقيقة. في العيادة، نقوم الآن بوصف إجراء تنظيف الأوعية الدموية لجميع المرضى
+                                    ممن يزيد عمرهم عن 50 عامًا (البعض منهم فوق 40 عامًا). وبعد التنظيف نتمعن حالتهم. ما
+                                    يقرب من 9 أشخاص من أصل 10 يتم تنظيم الضغط  لديهم على الفور بعد التنظيف دون إستخدام اي حبوب إضافية.
+                                </p>
+                                <p><b>بعبارة أخرى، العديد ممن يتناولون حبوبًا بصفة يومية لتثبيت ضغط الدم بيدهم الخيار
+                                        للتوقف عن ذلك. كل ما هو مطلوب هو تنظيف الأوعية. وحتى لو لم يزول ارتفاع ضغط الدم
+                                        تمامًا (وهذا يحدث أحياناً)، إلا أنَّ الحالة الصحية ستتحسن عدة أضعاف!
+                                    </b> </p>
+                                <p>لسوء الحظ، يخفون الأطباء الفاسدون وشركات الأدوية هذه الطريقة للفعالة والبسيطة لتنظيم 
+                                    ضغط الدم، لأنهم يكبون لمرضاهم حبوب طويلة الأجل ومكلفة . ففي نهاية المطاف، كلما طالت فترة
+                                    المرض، زادت الحاجة لشراء الحبوب . الأمر نافع لهم. تنظيف الأوعية الدموية عملية بسيطة
+                                    وغير مكلفة وسرعان ما تحسن من حالة المريض.
+                                </p>
+                                <h2>شفاء امرأة عجوزة من المغرب من ارتفاع ضغط الدم بعد تنظيف الأوعية الدموية. وهنالك
+                                    الكثير من أمثالها….
+                                </h2>
+                                <p>أود أن أعرض عليكم رسالة من زهرة مبهوت،   . حكم عليها الأطباء في
+                                    عيادة محلية بالموت. فقرر أقاربها عدم الاستسلام. لم تستطع المرأة العجوز القدوم
+                                    إلينا، فاتصلت ابنتها بعيادتنا طلباً للنجدة. كيف يمكننا المساعدة عن بعد؟ لا يمكنني
+                                    حتى إجراء تشخيص عبر الهاتف. نصحناها بتنظيف الأوعية.
+                                </p>
+                                <p>وبعد 3 أشهر، كتبت لنا السيدة العجوز بذاتها! أريد أن أشارككم رسالتها.
+                                </p>
+                                <div class="pg bg_tt">
+                                    <figure class="Figure" style="text-align:center">
+                                        <img
+                                            src="img/download (3).jpeg">
+                                        <span class="Figure-caption"></span>
+                                    </figure>
+                                    <p>زهرة مبهوت بالغة 75 سنة من العمر. المواطنة المغربية, متقاعدة, تعاني من ارتفاع ضغط
+                                        الدم والعديد من الأمراض الأخرى.
+                                    </p>
+                                    <p>"شكراً جزيلاً لكم لاسترجاعي من عداد الموتى! عندما اتصلت بكم ابنتي، كنت فاقدة
+                                        الوعي، لم أستطع أن أفكر في أي شيء على الإطلاق. ضباب قد ملأ رأسي بسبب الضغط العالي
+                                        الذي لم يستقر حتى بعد تناول الحبوب. كنت على فراش الموت، ولم يضعوني في المستشفى
+                                        حتى، بل طلبوا من بناتي حجز مكان لي في المقبرة. لكن ابنتي قررت الاتصال بكم. وبعد
+                                        ذلك بدأت تعطيني المكمل الغذائي الذي أرسلته لنا. لحسن الحظ، زال الألم. و تنظم الضغط
+                                        تدريجياً. الآن لا يرتفع على الإطلاق. لقد عدت من الموت بكل المعنى للكلمة.
+                                        قبل أسبوع تم فحصي في المستشفى، وعندما بلغوني أنني بصحة جيدة بالنسبة لعمري،
+                                        اندهشت للغاية. فقبل بضعة أشهر كنت شبه ميتة. آمل حقًا أن أنعم بالحياة لفترة أطول.
+                                        أحب الحياة من كل روحي. شكراً جزيلاً لك على مساعدتك".</p>
+                                </div>
+                                <p>هذه إحدى المعجزات بعد تنظيف الأوعية. على الرغم من عدم وجود معجزات في الواقع ، فكل شيء
+                                    مفسر.
+                                </p>
+                                <h3>طريقة تنظيف الأوعية الدموية لكبار  السن ومرضى ارتفاع ضغط الدم.
+                                </h3>
+                                <p><b>يقول الدكتور يوسف محمد:
+                                    </b> </p>
+                                <p>- يوجد اليوم في المغرب منتج واحد فقط ينفذ هذه المهمة. وهو <a href="#"></a>Cardioton</a>. تم إنتاج هذا
+                                    المكمل الغذائي في عام 2015 من قبل معهد القلب والأوعية الدموية وهو يحتوي على حوالي 40 مكونًا
+                                    نشطًا ومستخلصات النباتات المفيدة للأوعية الدموية والفيتامينات  
+                                     المفيدة.
+                                </p>
+                                <p>أهم مكون في تركيبة "<a href="#">Cardioton</a>" يسمى بـ "جزيئات الأكسجين النشطة"، القادرة على "إبتلاع"
+                                    التلوث المتراكم في الأوعية، حيث يقوم بإذابة الكوليسترول وتجلط الدم وبلورات
+                                    الكالسيوم.
+                                </p>
+                                <p>اكتشف العلماء اليابانيون "جزيئات الأكسجين النشطة" في عام 2007. وبفضل البحوث في هذا
+                                    المجال، نال عالمان يابانيان  جائزة نوبل. اليوم، تستخدم "جزيئات الأكسجين النشطة"
+                                    بنشاط في الطب عالميًا.
+                                </p>
+                                <p><b>بالمناسبة، بدأ اليابانيون يولون اهتمام متزايد لتنظيف الأوعية الدموية بعد سن 40-50
+                                        عامًا منذ عام 1965 حين اعتمد البرنامج الوطني لتحسين الصحة والعمر. وهناك مادة
+                                        مخصصة في هذا القانون لتنظيف الأوعية. واليوم نشهد نتيجة هذا القرار. تمتلك اليابان
+                                        الرقم القياسي لمتوسط ​​العمر المتوقع. فالعيش حتى سن الـ 100 لليابانيين أمر شائع.
+                                        حيث استخدموا اليابانيون سابقًا في تنظيف الأوعية الدموية بالأعشاب وممارسة التمارين
+                                        الرياضية واليوغا، فإنهم الآن يستخدمون مستحضرات خاصة تعتمد على "الأوكسجين النشط".
+                                    </b> </p>
+                                <h3>كم يتطلب <a href="#">Cardioton</a> من الوقت لتنظيف الأوعية الدموية؟
+                                </h3>
+                                <p>في المتوسط ينبغي تناول الكبسولات على مدى 2-4 أسابيع. ينبغي تناول كبسولتين صباحاً و مساءاً  مع
+                                    وجبات الطعام.
+                                </p>
+                                <p>سأذكر ما يفعله <a href="#">Cardioton</a> في جسمك وصحتك أثناء التنظيف، بالإضافة إلى حالة الجسم بعد
+                                    عدة أشهر من تناوله.
+                                </p>
+                                <p><b>تنظيف الأوعية الدموية .
+                                    </b> </p>
+                                <p>بسبب "جزيئات الأكسجين النشطة" يذيب <a href="#">Cardioton</a> ترسبات الكوليسترول وتجلط الدم وتراكم
+                                    الكالسيوم. بالإضافة إلى ذلك، بفضل مستخلص الهامامليس,  فإنه يعمل على تطبيع توتر
+                                    الأوعية الدموية ويستعيد مرونتها. وبعد شهر من الإستخدام،
+                                    تصبح الأوعية نظيفة ومرنة مثل أوعية الشباب في العمر بين 25 و 30 عامًا. تتم استعادة
+                                    الشعيرات الدموية الصغيرة. ونتيجة لذلك، يستقر ضغط الشخص ويزول الشعور بالضعف العام
+                                    والنعاس، كما تتحسن القدرة على تعافي الجروح والتقرحات. بالإضافة إلى ذلك، يشعر المرء
+                                    بالمزيد من القوة والطاقة وتظهر الرغبة الفورية للقيام بشيء ما في المنزل أو خارج
+                                    المنزل.
+                                </p>
+                                <p><b>استعادة عمل الأعضاء الداخلية والمفاصل
+                                    </b> </p>
+                                <p>بعد تنظيف الأوعية، تشرع عملية استعادة الأعضاء الداخلية. لحسن الحظ، منحتنا الطبيعة
+                                    خاصية تجديد الخلايا. نتيجة لذلك، يزول العديد من الأمراض. على سبيل المثال، إذا كان
+                                    البنكرياس أو الطحال يسببان الألم، فسوف يتوقف الألم. في كثير من الأحيان بعد تنظيف
+                                    الأوعية الدموية تلتئم قرحة المعدة والاثني عشر. بالإضافة إلى ذلك، تتم استعادة عمل
+                                    المفاصل. تزول طقطقة العنق والظهر والمفاصل. الغضاريف تنتعش. لا تتأثر الركبتين
+                                    والأصابع بتغيير المناخ. تتم استعادة الحركة الطبيعية للمفاصل.
+                                </p>
+                                <p><b>شفط الدهون الزائدة
+                                    </b> </p>
+                                <p>الوزن الزائد هو ما يفاقم حالة مريض الضغط بـ 4-5 أضعاف. كلما زاد الوزن، زاد الحمل على
+                                    الأوعية الدموية والقلب والمفاصل. غالبًا ما يكون سبب لزيادة الوزن انسداد الأوعية
+                                    الدموية، حيث يستحيل إزالة الجلوكوز من الأنسجة بالكمية المناسبة. بعد تنظيف ما يتراكم
+                                    في الأوعية، يبدأ الوزن في الزوال تلقائيًا. بالإضافة إلى ذلك، <a href="#">Cardioton</a> هو عبارة
+                                    عن مستخلص من الكستناء الهندي وهو يسرع عملية تفكك الدهون. في المتوسط، يفقد الشخص 8-12 كغم بعد
+                                    شهر من تنظيف الأوعية الدموية.
+                                </p>
+                                <p><b>استعادة البصر والذاكرة
+                                    </b> </p>
+                                <p>يحتوي <a href="#">Cardioton</a> على مستخلص من السيليكا الغروية  الصغيرة القادرة على استعادة الأوعية
+                                    الدقيقة بقعر العين، ونتيجة لذلك تتم استعادة الرؤية تدريجيًا. يبدأ العديد من الأشخاص
+                                    مرة أخرى في رؤية أرقام الحافلات من بعيد وإعادة إدخال الخيط في الإبرة. حيث تتم
+                                    استعادة كاملة للأوعية الدموية في العين. أولئك الذين لديهم أوعية دموية نظيفة ليسوا
+                                    عرضى للإصابة بالعمى على الإطلاق! أطباء العيون جميعهم يعلمون ذلك.
+                                </p>
+                                <p><b>تحسن القدرة الجنسية
+                                    </b> </p>
+                                <p>من الآثار المدهشة بعد تنظيف الأوعية الدموية إعادة إنتاج هرمون التستوستيرون لدى
+                                    الرجال. ونتيجة لذلك، يزول التهاب البروستاتا وتتوقف ضخامة البروستات. فضلا عن استرجاع
+                                    القدرة الجنسية. فإذا كان عمرك أقل من 70 عامًا، ستتمكن من ممارسة الجنس مرة أخرى.
+                                </p>
+                                <figure class="Figure" style="text-align:center">
+                                    <img
+                                        src="img/download (4).jpeg">
+                                    <span class="Figure-caption"></span>
+                                </figure>
+                                <h3>تأثير الفراشة لكبار السن ومرضى ضغط الدم!
+                                </h3>
+                                <p>إن تأثير <a href="#">Cardioton</a> بمثابة تأثير رفرفة أجنحة الفراشة، المؤدي إلى سلسلة من ردود
+                                    الفعل الداخلية للصحة والعافية. بدءاً من تنظيف الأوعية الدموية وانتهاءً باستعادة
+                                    الرؤية والمفاصل.
+                                </p>
+                                <p>على مدى 1-3 أشهر بعد تنظيف الأوعية الدموية يشعر المرء وكأنه وُلد من جديد. في الوقت
+                                    نفسه، يشعر المرضى بتحسن ملحوظ كل أسبوع.
+                                </p>
+                                <p><b>إستيقاظ سلس من النوم
+                                    </b> </p>
+                                <p>تستيقظ في الصباح و تقوم بسهولة من السرير، لست بحاجة لتجبر نفسك على النهوض وعجن وفرك
+                                    ساقيك المتيبستين، مما يؤدي إلى صرير ظهرك ورقبتك. من الصباح يمتلئ الجسم بالطاقة
+                                    والقوة.
+                                </p>
+                                <p><b>صحة ممتازة ومزاج جيد
+                                    </b> </p>
+                                <p>من الصباح وطوال اليوم. تحظى بنوم جيد دائمًا. تشعر بالحيوية. ليس عليك الذهاب إلى
+                                    المرحاض طوال الوقت في الليل. يزول الألم أو حكة.
+                                </p>
+                                <p><b>فطور شهي
+                                    </b> </p>
+                                <p>قائمة الفطور لديك سوف يتوسع بشكل ملحوظ. لا داعي بعد الآن لاتباع نظام غذائي صارم. سوف
+                                    تستذكر مذاق تلك الأطباق التي تكون قد نسيتها تماماً بعد الإصابة بمرض السكري. لا مزيد
+                                    من اتباع نظام غذائي منخفض الكربوهيدرات. استمتع بمذاق الأطباق المفضلة لديك!
+                                </p>
+                                <p><b>القوة الجبارة
+                                    </b> </p>
+                                <p>عند مغادرة المنزل، لا داعي للقلق بشأن ساقيك. فأنت لا تنظر للمشي على أنه عبء على
+                                    عاتقك، بإمكانك المشي طوال اليوم دون ان تتعب ساقيك ولا تنتفخ. لا تترك الصنادل
+                                    والأحذية والجوارب علامات علي الساقين المنتفخة كخيوط في عصا قديمة.
+                                </p>
+                                <p><b>الراحة المطلقة
+                                    </b> </p>
+                                <p>تكون مرتاحا على أكمل وجه. لا مزيد من الآلام المستمرة التي تستغل عقلك وتمنعك من
+                                    التركيز. عندما تختفي أعراض المريض، فإن الأصوات والروائح تتلاعب بألوان جديدة منسية
+                                    منذ زمن طويل.
+                                </p>
+                                <p><b>إستعادة النظر 
+                                    </b> </p>
+                                <p>حتى النظر المتضرر بشدة  سوف يتعافى تدريجياً. ما رأيته غائما من قبل سوف يتضح. ستتمكن مرة
+                                    أخرى من رؤية رقم الحافلة من بعيد والاستمتاع بجمال الطبيعة.
+                                </p>
+                                <p>والأهم من ذلك، ستتمكن من العيش مرتاح البال! انسى كوابيسك بزياراتك اليومية إلى
+                                    الصيدليات لجلب منتجات تنظيم ضغط الدم. كل هذا سيكون في صفحات الماضي لأن ضغط الدم سيستقر!
+                                </p>
+                                <h3>نقص <a href="#">Cardioton</a> في الصيدليات المغربية!
+                                </h3>
+                                <h3>بقدر ما نعلم، من الصعب للغاية شراء <a href="#">Cardioton</a> في الصيدليات المغربية. نادرًا ما
+                                    يكون هذا المكمل الغذائي متوفرًا، أهذا صحيح؟ وما النصيحة التي يمكنك أن تقدمها للشعب المغربي؟
+                                </h3>
+                                <p>- نعم هذا صحيح. يتم إنتاج <a href="#">Cardioton</a> بدفعات صغيرة محدودة، وبالتالي لا يتوفر  في
+                                    الصيدليات. وأغلب الكمية، للأسف، تغادر الدولة، والبعض منها يباع للعيادات الخاصة.
+                                </p>
+                                <p>الحصول على <a href="#">Cardioton</a> مشكلة حقيقية للناس العاديين. لكن الآن بإمكانكم طلبه من
+                                    عيادتنا. وللقيام بذلك، يمكنك ترك الطلب على الموقع. قررنا تخصيص جزء من الدفعة
+                                    المشتراة في إطار هذا البرنامج. صحيح، الدفعة صغيرة، لذا العبوات لن تكون كافية للجميع.
+                                    فقط أولئك من سيتركون الطلب سيحصلون عليه.
+                                </p>
+                                <p style="    font-size: larger;     font-weight: bolder;">شروط الحصول على <a href="#">Cardioton</a>
+                                </p>
+                                <ul>
+                                    <li> أن تكون مقيمًا في المغرب. نحن لا نشحن <a href="#">Cardioton</a> إلى الخارج.
+                                    </li>
+                                    <li> يُسمح بشراء <a href="#">Cardioton</a> للاستخدام الشخصي حصرًا. وأود أن أطلب من التجار ترك
+                                        المنتج لعامة الناس! جني مال على حساب كبار في السن غير إنساني!
+                                    </li>
+                                    <li> يمكن ترك الطلب بملء نموذج الطلب أدناه مع ذكر رقم الهاتف ليتمكن موظفينا من
+                                        التواصل معكم.
+                                    </li>
+                                </ul>
+                                
+                                <h3>اغتنم الفرصة قبل أن يغتنمها أحد غيرك!
+                                </h3>
+                                <p>أريد أن أحذركم فورًا أنه على رغم تخصيص كمية كبيرة من <a href="#">Cardioton</a> لتوزيعها على مرضى الضغط
+                                    في المغرب، إلا أن المنتج يباع بسرعة. وخاصة في الآونة الأخيرة، حيث يزداد الطلب على
+                                    المنتج. وقد يكون السبب وراء "القيل والقال" حول فعالية المنتج على مرضي القلب و الأوعية الدموية . لذلك،
+                                     إذا كنت ترغب في التخلص من  داء الضغط و تنظيف أوعيتك الدموية ، فاترك طلبا  بأسرع وقت ممكن، 
+                                    بينما لا يزال متوفرًا وقبلما يسبقك الآخرون.
+                                </p>
+                                <p id="form" class="rul_2" style="text-align:center"><b>  هام! الطلب عالي جداً علي <a href="#">Cardioton</a>!
+                                    </b></p>
+                                <p id="form" class="rul_2" style="text-align:center"><b>الدورات المتوفرة تُباع بسرعة!
+                                    </b></p>
+                                <p class="rul_1">متوفر حاليًا في المخزون </p>
+                                <h3 class="left_count" style="cursor:pointer"><b class="prod_left_val pac-minus">5</b> علبة
+                                </h3>
+                                <span id="cta"></span>
+
+                                <div class="spin-wrapper" style="display:none">
+
+
+                                </div>
+                                <div class="spin-result-wrapper" style="display:none">
+
+                                </div>
+
+<!--  -->
+<div id="form_form" style="margin-bottom:20px;">
+<style class=sf-hidden>
+    .countdown-block {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 10px;
+        box-shadow: 0 0 black
+    }
+
+    .countdown-block>h3 {
+        font-weight: 800;
+        font-size: 26px;
+        padding-top: 5px;
+        margin: 0;
+        line-height: 1;
+        padding-bottom: 10px
+    }
+
+    .countdown-container {
+        max-width: 320px;
+        border: 5px solid #fffd07;
+        text-align: center;
+        margin: 0 auto
+    }
+
+    .countdown-container h3 {
+        color: #fffd07;
+        margin: 0 auto;
+        margin-top: -10px;
+        width: 90%;
+        text-transform: uppercase;
+        font-weight: 700
+    }
+
+    .countdown {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+        font-size: 39px;
+        line-height: 1
+    }
+
+    .countdown-item {
+        color: #fff;
+        width: 80px;
+        font-weight: bold;
+        text-align: center
+    }
+
+    .countdown-divider {
+        color: #fff;
+        width: 1rem
+    }
+
+    .countdown-text {
+        margin: 0 auto;
+        margin-bottom: -8px;
+        width: 90%;
+        color: #fffd07;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase
+    }
+
+    .countdown-text span {
+        text-align: center;
+        width: 33%
+    }
+
+    .best-form {
+        font: 16px/1.2 "Roboto", sans-serif;
+        padding: 1rem;
+        padding-bottom: 40px;
+        color: #fff;
+        background-color: #fa0;
+        background-image: url(data:application/octet-stream;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIHN0eWxlPSJoZWlnaHQ6MTAwJSI+CjxoZWFkPgo8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIHNocmluay10by1maXQ9bm8iPgo8dGl0bGU+IDUwMCBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3INCjwvdGl0bGU+PC9oZWFkPgo8Ym9keSBzdHlsZT0iY29sb3I6ICM0NDQ7IG1hcmdpbjowO2ZvbnQ6IG5vcm1hbCAxNHB4LzIwcHggQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjsgaGVpZ2h0OjEwMCU7IGJhY2tncm91bmQtY29sb3I6ICNmZmY7Ij4KPGRpdiBzdHlsZT0iaGVpZ2h0OmF1dG87IG1pbi1oZWlnaHQ6MTAwJTsgIj4gICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsgd2lkdGg6ODAwcHg7IG1hcmdpbi1sZWZ0OiAtNDAwcHg7IHBvc2l0aW9uOmFic29sdXRlOyB0b3A6IDMwJTsgbGVmdDo1MCU7Ij4KICAgICAgICA8aDEgc3R5bGU9Im1hcmdpbjowOyBmb250LXNpemU6MTUwcHg7IGxpbmUtaGVpZ2h0OjE1MHB4OyBmb250LXdlaWdodDpib2xkOyI+NTAwPC9oMT4KPGgyIHN0eWxlPSJtYXJnaW4tdG9wOjIwcHg7Zm9udC1zaXplOiAzMHB4OyI+SW50ZXJuYWwgU2VydmVyIEVycm9yDQo8L2gyPgo8cD5BbiBpbnRlcm5hbCBzZXJ2ZXIgZXJyb3IgaGFzIG9jY3VyZWQuPC9wPgo8L2Rpdj48L2Rpdj48L2JvZHk+PC9odG1sPgo=);
+        background-size: cover
+    }
+
+    form {
+        max-width: 320px;
+        margin: 0 auto
+    }
+
+    .product {
+        max-width: 420px;
+        margin: 0 auto;
+        display: flex
+    }
+
+    .product .left {
+        width: 100%;
+
+    }
+
+    .product .right {
+        height: 110px;
+        width: 60%;
+        text-align: center;
+        border: 3px solid #fffd07;
+        background-color: #005773;
+
+        border-radius: 50px;
+        box-shadow: 0px 0px 35px 1px #82b1e1;
+
+    }
+
+    .product .price-old {
+        line-height: 1
+    }
+
+    .product .price-old span {
+        display: inline-block;
+        padding: 0 1rem;
+        color: #000;
+        position: relative
+    }
+
+    .product .price-old span:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 45%;
+        right: 0;
+        border-top: 5px solid #ed1b24;
+        transform: rotate(-10deg)
+    }
+
+    .product .discount-text {
+        margin-top: 1rem;
+        color: #000;
+        font-size: 18px
+    }
+
+    .product .price {
+        color: #ff0101;
+        font-weight: 700;
+        letter-spacing: -2px;
+        line-height: 1
+    }
+
+    input,
+    button {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit
+    }
+
+    .name-input,
+    .phone-input {
+        color: #000;
+        background: #fff;
+        border: 0;
+        width: 100%;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 19px;
+        margin-bottom: 10px;
+        display: flex;
+        transition: all .15s ease-in-out
+    }
+
+    .name-input input,
+    .phone-input input {
+        flex: 1 1 auto;
+        border: 0;
+        font: inherit;
+        color: inherit;
+        box-sizing: border-box;
+        min-width: 0;
+        padding: 10px 15px;
+        border-radius: 6px
+    }
+
+    input::placeholder {
+        text-decoration: underline dotted;
+        font-family: sans-serif;
+        color: grey !important
+    }
+
+    .button-submit {
+        text-align: center;
+        display: flex;
+        box-sizing: border-box !important;
+        width: 100%;
+        margin: 0 auto;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        color: #fff;
+        border-radius: 6px;
+        border: 0;
+        padding: 14px 0;
+        transition: all .15s ease-in-out;
+        cursor: pointer;
+        font: 19px/1.4 "Roboto", sans-serif;
+        font-weight: 400
+    }
+
+    .button-submit-text {
+        color: #101010;
+        flex: 1 1 auto;
+        font: inherit;
+        font-weight: 900
+    }
+
+    #only-mob {
+        display: none
+    }
+
+    @media screen and (max-width:759px) {
+        .product {
+            display: block
+        }
+
+        .product .left,
+        .product .right {
+            width: 100%
+        }
+
+        #only-mob {
+            display: block;
+            text-align: center
+        }
+    }
+
+    @keyframes shadow-pulse2 {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 128, 0, 0.9)
+        }
+
+        100% {
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0)
+        }
+    }
+
+    .btnbtn {
+        text-decoration: none;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+        color: rgb(4, 4, 4) !important;
+        background-color: #ffda00;
+        background-image: none;
+        display: inline-block;
+        padding: 3px 14px;
+        margin: 9px;
+        font-size: 20px;
+        line-height: 1.42857;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        text-transform: uppercase;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        animation: shadow-pulse2 1s infinite;
+        font-weight: 700;
+        white-space: normal
+    }
+
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 113, 227, 0.9)
+        }
+
+        100% {
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0)
+        }
+    }
+
+    @keyframes shadow-pulse-big {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 113, 227, 0.9)
+        }
+
+        100% {
+            box-shadow: 0 0 0 70px rgba(0, 0, 0, 0)
+        }
+    }
+
+    .timer-in-button {
+        margin: 12px;
+        display: block;
+        white-space: nowrap
+    }
+
+    .timer-in-button span {
+        margin: 0 7px;
+        background: white;
+        color: red;
+        padding: 5px;
+        border-radius: 3px
+    }
+
+    .prod-pulse {
+        margin-bottom: 15px;
+        border-radius: 20px;
+        animation: prod-shadow-pulse 1s infinite
+    }
+
+    @keyframes prod-shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.9)
+        }
+
+        100% {
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0)
+        }
+    }
+
+    @keyframes prod-shadow-pulse2 {
+        0% {
+            background: linear-gradient(rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 25%)
+        }
+
+        11% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0) 50%)
+        }
+
+        23% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 75%)
+        }
+
+        34% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0) 100%)
+        }
+
+        45% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.8) 100%)
+        }
+
+        55% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0.8) 100%)
+        }
+
+        66% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0) 100%)
+        }
+
+        77% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 75%)
+        }
+
+        89% {
+            background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0) 50%)
+        }
+
+        100% {
+            background: linear-gradient(rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 25%)
+        }
+    }
+
+    @keyframes prod-shadow-pulse3 {
+        0% {
+            box-shadow: 5px 0px 2px white
+        }
+
+        15% {
+            box-shadow: 5px 5px 2px white
+        }
+
+        30% {
+            box-shadow: 0px 5px 2px white
+        }
+
+        45% {
+            box-shadow: -5px 5px 2px white
+        }
+
+        55% {
+            box-shadow: -5px 0px 2px white
+        }
+
+        70% {
+            box-shadow: -5px -5px 2px white
+        }
+
+        85% {
+            box-shadow: 0px -5px 2px white
+        }
+
+        100% {
+            box-shadow: 5px -5px 2px white
+        }
+    }
+</style>
+<style class=sf-hidden>
+    .img-responsive {
+        width: 140%;
+        max-width: 140%;
+        position: relative;
+        left: 0px
+    }
+
+    .countdown-container h3 {
+        font-size: 1rem
+    }
+
+    .countdown-text {
+        font-size: .8rem
+    }
+
+    .product .price-old span {
+        font-size: 35px
+    }
+
+    .product .price {
+        font-size: 40px
+    }
+
+    .best-form {
+        background: linear-gradient(#efeeed, #82b1e1)
+    }
+
+    .countdown-block,
+    .countdown-container,
+    .countdown-container h3,
+    .countdown-text {
+        background: #005773
+    }
+
+    .button-submit {
+        background-image: linear-gradient(to top, #fffd07, #fffd07)
+    }
+
+    @media screen and (max-width:759px) {
+        .img-responsive {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            position: inherit
+        }
+    }
+</style>
+
+
+<div class=countdown-block id=to-order-form>
+    <h3 style="color: #fff; text-align: center;" class=my-own>خصم 50٪  </h3>
+    <div class=countdown-container>
+        <h3 style="text-align: center;" class=my-own>نهاية الإجراء</h3>
+        <div dir="ltr" id="countdown" class="countdown" style="padding-bottom: 20px;">
+
+            <div class="countdown-number">
+                <span class="hours countdown-time"> </span>
+
+            </div>
+            <div class="countdown-number">
+                :<span class="minutes countdown-time"> </span>:
+
+            </div>
+            <div class="countdown-number">
+                <span class="seconds countdown-time"> </span>
+
+            </div>
+        </div>
+        <div class=countdown-text>
+            <span></span>
+            <span></span>
+            <span></span>
+            <br>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date(Date.parse(new Date()) + 01 * 01 * 60 * 60 * 1000); // for endless timer
+    initializeClock('countdown', deadline);
+</script>
+<div class=best-form>
+    <div class="wrap">
+        <div class="product prod-pulse">
+
+            <div class=left>
+                <img style="max-width: 50%;" src="prod.png" alt="">
+            </div>
+
+            <div class=right>
+                <div class="price-old sf-hidden" id=not-on-mob></div>
+                <div class=discount-text></div>
+                <div style="display: block; " class=price-old id=only-mob> <s
+                        style="color: #fff; font-size: 25px; ">798 DH</s>
+                </div>
+                <div style="font-size: 35px; color: rgb(255, 238, 4); margin: 10px;"
+                    class=price>399 DH</div>
+            </div>
+        </div>
+        <div>
+    <!-- LemonAD [BEGIN] -->
+    <form id="form_anchor" action="integrations/lemonad.php" method="POST">
+        <input type="hidden" name="utm_campaign" value="{utm_campaign}">
+        <input type="hidden" name="clickid" value="{subid}">
+        <input type="hidden" name="sub2" value="{sub2}">
+        <input type="hidden" name="offer_id" value="f846c5e3-386f-4450-82f9-2cc4af78179a"> <!-- offer_id -->
+    <!-- LemonAD [END] -->
+                <div class=name-input>
+                    <input id=name-input type=text placeholder=اسم name=name
+                        required autocomplete=name value style="margin: auto !important;">
+                </div>
+                <div class=phone-input>
+                    <input id=phone-input type=tel placeholder="رقم التليفون"
+                        name=phone required value style="margin: auto !important;">
+                </div>
+                <button type=submit class=button-submit>
+                    <span class=button-submit-text>إرسال</span>
+                </button>
+            </form>
+        </div>
+    </div>
+   </div>
+<!--  -->
+
+                            <div id="comments">
+                                <h2 class="spoint data=11">تعليقات :</h2>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/alyaa.jpg">
+                                        </div>
+                                        <span class="row-y-name">علياء . <span
+                                                class="randdate date-6">22.05.2022</span></span>
+                                        <div class="pg">شكرا جزيلا لمنحكم المتقاعدين هذه الفرصة العظيمة! لقد ساعدني 
+                                            <a href="#">Cardioton</a>. عانيت من ارتفاع ضغط الدم بشكل رهيب، والآن لا يرتفع على
+                                            الإطلاق. ركبتي كانت تئن طوال الوقت، والآن لا تتألم. زال الصداع! وزال الشعور
+                                            بالمرارة في الفم. والعديد من التغييرات الأخرى. وكأنني رجعت شابة!!
+                                            
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/raoof.jpg">
+                                        </div>
+                                        <span class="name">رؤوف . <span class="randdate date-6">22.05.2022</span></span>
+                                        <div class="pg">طلبته. آمل حقًا أن تكفيني علبة منه. أبلغ من العمر 50 عامًا وأنا
+                                            أنهار بسبب المرض. قرأت الكثير عن تنظيف الأوعية الدموية ومدى فاعليتها. اريد
+                                            ان اجربها.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/rafee3a.jpg">
+                                        </div>
+                                        <span class="name">رفيعة. <span class="randdate date-6">22.05.2022</span></span>
+                                        <div class="pg"><a href="#">Cardioton</a> هو أفضل منتج على الإطلاق. في السابق كنت أتناول
+                                            أديلفان، ومن ثم إيرينيت. أعلم، إنها الأدوية التي عفا عليها الزمن. لكنني لا
+                                            أحب مراجعة الأطباء، ولم يزعجني الأمر كثيرًا. كنت أتناولها من حين لآخر، عندما
+                                            يرتفع الضغط أو كان قلبي يؤلمني. لكن فجأة توقفت الأدوية عن العمل. راجعت
+                                            الطبيب، ونصحني بتجربة  <a href="#">Cardioton</a> (ربما بسبب أن الطبيب كان شابًا
+                                            يؤمن أن على الأطباء خدمة عامة الناس، وليس سحب المال منهم!). ساعدني <a href="#">Cardioton</a>
+                                             من المرة الأولى حيث انخفض الضغط على الفور، لكنني استكملت دورة <a href="#">Cardioton</a> 
+                                            باتباع نصيحة الطبيب. بعد 3 أسابيع نسيت ما هو ارتفاع ضغط الدم على الإطلاق.
+                                            إختفت الدوالي التي كانت تعذبني لمدة 10 سنوات! عانيت أيضًا من مشكلة أنثوية، وهي
+                                            زالت أيضًا. أشعر بالروعة، كما لو كنت شابة!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/salman.jpg">
+                                        </div>
+                                        <span class="name">سلمان . <span class="randdate date-5">23.05.2022</span></span>
+                                        <div class="pg">أيضًا طلبت  <a href="#">Cardioton</a>. ساعدني جيدًا. تحسنت حالتي الصحية
+                                            بشكل ملحوظ. أوصي به لجميع كبار السن.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/amal.jpg">
+                                        </div>
+                                        <span class="name">أمل حسن <span class="randdate date-4">23.05.2022</span></span>
+                                        <div class="pg">أؤكد! منتج روعة!!! حصلت على <a href="#">Cardioton</a> بسعر الخصم من الموقع!
+                                            عانيت من الضغط بصفة يومية في الأمسيات ومن الصداع جعلني كدت ان اصبح مجنونة  ولم
+                                            تتمكن حتى المسكنات من مساعدتي. على الرغم من أنني اكتشفت لاحقًا أن رأسي بدأ
+                                            يؤلمني من الضغط. مهما يكن. نصحتني زميلتي في الدراسة بـ <a href="#">Cardioton</a>، وتمكنت
+                                            من طلبه عبر برنامج الخصم، وكنت سعيدة للغاية. خلال شهرين أصبحت شخصًا مختلفًا!
+                                            أدركت أنني لم أكن على قيد الحياة قبل تنظيف الأوعية الدموية! زالت آلام الرأس،
+                                            وزالت الدوالي... والأهم لقد نقصت 20 كغم من الوزن! من 94 كغم إلى 74 كغم! هكذا
+                                            تبدو عملية تطبيع الدورة الدموية!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/hanan.jpg">
+                                        </div>
+                                        <span class="name">حنان . <span class="randdate date-4">23.05.2022</span></span>
+                                        <div class="pg">أؤكد! منتج فعال جدا لمشكلات ضغط الدم! الآن ضغط دمي مستقر عند
+                                            120/80.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/abdel.jpg">
+                                        </div>
+                                        <span class="name"> عبد الحميد <span class="randdate date-3">23.05.2022</span></span>
+                                        <div class="pg">خاطرت ولم أندم يومًا. إذا كنت تعاني من مشاكل في الأوعية الدموية،
+                                            فإنني أوصي بهذا المنتج. لم تكن هناك أي آثار جانبية، وأسعدتني النتيجة.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/kawsa.jpg">
+                                        </div>
+                                        <span class="name">كوثر . <span class="randdate date-2">24.05.2022</span></span>
+                                        <div class="pg">أنا ممتنة جدًا لكم على المعلومات عن هذا المنتج. لقد كنت أبحث عن
+                                            شيء من هذا القبيل لفترة طويلة. أتطلع إلى استلامه! تمكنت من طلبه بسعر الخصم!
+                                            شكرًا لكم!
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/motaz.jpg">
+                                        </div>
+                                        <span class="name">معتز . <span class="randdate date-2">24.05.2022</span></span>
+                                        <div class="pg">كنت أعاني من ارتفاع في ضغط الدم.... وخلال 10 أيام بعد إستخدام <a href="#">Cardioton</a>  
+                                            زال ضغط الدم المرتفع ! شكرًا لكم!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/mohamed.jpg">
+                                        </div>
+                                        <span class="name"> محمد. <span class="randdate date-2">24.05.2022</span></span>
+                                        <div class="pg">شكرا لكم على توفير <a href="#">Cardioton</a>! جربته، وتيسرت حياتي من وراءه.
+                                            سنرى النتيجة بعد أسبوع من تناوله. الوقت يسبق أوانه للتعليق، يتبع... لكن
+                                            الضغط قد استقر، حتى أنني لم أشعر به. لذلك أعتقد أن كل شيء سيكون على ما يرام!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/hadeer.jpg">
+                                        </div>
+                                        <span class="name">هدير . <span class="randdate date-2">24.05.2022</span></span>
+                                        <div class="pg">الطبيب محق بشأن <a href="#">Cardioton</a>. أنا واحدة من أولئك الذين تمكنوا من
+                                            تجربته. كنت أعاني من ارتفاع ضغط الدم على مدى 7 سنوات. طوال حياتي أتناول
+                                            الحبوب، ولكن بعد دورة "<a href="#">Cardioton</a>"، استقر الضغط ولم يرتفع بتاتاً.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/ahmed.jpg">
+                                        </div>
+                                        <span class="name"> احمد. <span class="randdate date-2">24.05.2022</span></span>
+                                        <div class="pg">يا للعجب من هذا المنتج. لم أشعر بظهري والجانب الأيسر والمفاصل قبل
+                                            تناوله. وعانيت من الضغط المرتفع لدرجة أنني تمنيت أن أموت. في الصباح بالكاد
+                                            تمكنت من فتح عيني. كنت أعيش الجحيم. تناولت الكثير من الحبوب. بعدها علمت بشأن
+                                            <a href="#">Cardioton</a> وتنظيف الأوعية الدموية. وبعد 3 أسابيع شعرت بتحسن ملحوظ. تحسنت
+                                            صحتي. وقد أعيش لفترة أطول قليلاً! شكرا جزيلا لكم!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/shad.jpg">
+                                        </div>
+                                        <span class="name">شادي . <span class="randdate date-1">24.05.2022</span></span>
+                                        <div class="pg">اعتاد جاري أن يشكو من أمراض مختلفة. من المعدة الى القلب. لكن في
+                                            الشهر الماضي رأيته نشيطًا ومبهجًا. قال إنه تناول <a href="#">Cardioton</a>. عمره 72 سنة.
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/wazeer.jpg">
+                                        </div>
+                                        <span class="name">عبد الله . <span class="randdate date-0">24.05.2022</span></span>
+                                        <div class="pg">شكرًا!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="row-y-item">
+                                    <div class="info">
+                                        <div class="coment_ava"><img
+                                                src="img/avatars/mastoora.jpg">
+                                        </div>
+                                        <span class="name">مستورة. <span
+                                                class="randdate date-0">24.05.2022</span></span>
+                                        <div class="pg"> أشكركم جداً علي هذا المنتج لقد اسمتلمته منذ اسبوع و بالفعل أشعر بتحسن ملحوظ!
+                                        </div>
+                                        <hr>
+
+                                    </div>
+                                </div>
+                                <div class="middle">
+                                    <div align="center">
+                                        <a class="button" data-toggle="scroll"
+                                            href="#ordeee">اطلب Cardioton
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <div id="footer" style="display:block">
+            <img src="img/download.jpeg" alt="">
+            <p> عند استخدام مواد الموقع يجب أخذ موافقة مسبقة، ينبغي ذكر الرابط.
+            
+        </div>
+    </div>
+    
+        <!-- Custom utils [BEGIN] -->
+    <script src="integrations/js/utils.js"></script>
+    <!-- Custom utils [END] -->
